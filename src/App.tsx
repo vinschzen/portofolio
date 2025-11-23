@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 
 import { styles } from './styles/layout';
 import HeroCanvas from './components/HeroCanvas';
+import Footer from './components/Footer';
 
 export default function App() {
   const [page, setPage] = useState<'home' | 'about' | 'works' | 'contact'>('home');
@@ -22,9 +23,9 @@ export default function App() {
         {page === 'about' && <About />}
         {page === 'works' && <Works />}
         {page === 'contact' && <Contact />}
+        <HeroCanvas />
       </main>
-      <footer style={styles.footer}>© {new Date().getFullYear()} — Your Name</footer>
-      <HeroCanvas />
+      <Footer />
     </div>
   );
 }

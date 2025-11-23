@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +62,84 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.stretch-glitch {
+  position: relative;
+  display: inline-block;
+  animation: stretch 2s ease-in-out infinite;
+}
+
+.stretch-glitch::before,
+.stretch-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+.stretch-glitch::before {
+  color: red;
+  transform: translateX(-2px);
+  animation: chroma-left 1.5s infinite alternate;
+}
+
+.stretch-glitch::after {
+  color: cyan;
+  transform: translateX(2px);
+  animation: chroma-right 1.5s infinite alternate;
+}
+
+/* Stretch animation */
+@keyframes stretch {
+  0%, 100% { transform: scaleX(1) }
+  50% { transform: scaleX(1.15) }
+}
+
+/* Chromatic shifting */
+@keyframes chroma-left {
+  0% { transform: translateX(-2px) }
+  100% { transform: translateX(-4px) }
+}
+
+@keyframes chroma-right {
+  0% { transform: translateX(2px) }
+  100% { transform: translateX(4px) }
 }

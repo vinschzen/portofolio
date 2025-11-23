@@ -11,7 +11,9 @@ export const styles: Record<string, React.CSSProperties> = {
         fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue'",
     },
     nav: {
-        zIndex: 10,
+        zIndex: 20,
+        position: 'sticky',
+        top: 0,
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -34,34 +36,46 @@ export const styles: Record<string, React.CSSProperties> = {
         border: 'none',
         padding: '6px 10px',
         cursor: 'pointer',
-        borderRadius: 8,
+        borderRadius: 0,
         fontSize: '0.95rem',
         whiteSpace: 'nowrap',
+        transition: "all 0.3s ease",
     },
     navBtnActive: {
-        background: 'rgba(255,255,255,0.04)'
+        padding: "0.5rem 1rem",
+        border: "1px solid white",
+        background: "white",
+        color: "black",
+        borderRadius: "0px",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
     },
     main: {
         zIndex: 10,
         flex: 1,
-        padding: '16px',
+        // padding: '16px',
         width: '100%',
         boxSizing: 'border-box',
     },
     footer: {
+        zIndex: 10,
+        position: 'sticky',
+        bottom: 0,
         padding: '12px 8px',
         textAlign: 'center',
         color: 'rgba(230,238,248,0.6)',
         fontSize: '0.85rem',
     },
     heroWrap: {
-        // position: 'absolute',
+        position: 'absolute',
         // left: 0,
         // position: 'relative',
+        zIndex: 1,
+        top: 0,
         height: '100vh',
-        minHeight: 380,
+        // minHeight: 380,
         borderRadius: 12,
-        overflow: 'hidden',
+        // overflow: 'hidden',
         boxShadow: '0 10px 30px rgba(2,6,23,0.6)'
     },
     canvasContainer: {
@@ -70,7 +84,7 @@ export const styles: Record<string, React.CSSProperties> = {
     },
     heroContent: {
         position: 'absolute',
-        left: 28,
+        left: 228,
         top: '18%',
         zIndex: 2,
         maxWidth: '80%',
@@ -86,13 +100,17 @@ export const styles: Record<string, React.CSSProperties> = {
         fontWeight: 600,
         fontSize: '0.9rem',
     },
-    pageInner: {
+    page: {
         maxWidth: 860,
         margin: '20px auto',
         lineHeight: 1.6,
         padding: '0 12px',
         width: '100%',
         boxSizing: 'border-box',
+
+        animation: "fadeSlide 0.6s ease forwards",
+        opacity: 0,
+        transform: "translateY(20px)",
     },
     
 };
