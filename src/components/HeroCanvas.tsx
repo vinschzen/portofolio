@@ -100,7 +100,7 @@ function Carousel({ radius = 1.4, count = 8, setSelectedCard, selectedCard }: an
                 <Card
                     key={i}
                     index={i}
-                    url={`/portfolio/screenshot.png`}
+                    url={`/screenshot.png`}
                     selectedCard={selectedCard}
                     setSelectedCard={setSelectedCard}
                     position={[
@@ -165,7 +165,7 @@ function Card({ url, setSelectedCard, selectedCard, index, ...props }: any) {
 
 function Banner(props: any) {
     const ref = useRef<THREE.Mesh>(null!)
-    const texture = useTexture('/portfolio/banner.png')
+    const texture = useTexture('/banner.png')
 
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 
