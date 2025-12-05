@@ -1,18 +1,21 @@
 {
   "name": "portofolio",
-  "private": true,
+  "homepage": "https://vinschzen.github.io/portofolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.4.0",
     "@react-three/rapier": "^2.2.0",
+    "gh-pages": "^6.3.0",
     "motion": "^12.23.25",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
