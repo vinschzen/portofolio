@@ -7,7 +7,7 @@ const Home: React.FC = () => (
       <div style={styles.heroContent}>
         <h1 style={{ margin: 0, marginTop: '70%' }}>Hi, I'm Vin</h1>
         <p style={{ marginTop: 8 }}>Undergradute, Data Science. I build things.</p>
-        <button style={styles.cta}>See my work</button>
+        <button style={styles.cta}>Contact Me</button>
       </div>
   </section>
 );

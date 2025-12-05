@@ -101,6 +101,7 @@ export const styles: Record<string, React.CSSProperties> = {
         fontSize: '0.9rem',
     },
     page: {
+        zIndex: 2,
         maxWidth: 860,
         margin: '20px auto',
         lineHeight: 1.6,

@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   const [page, setPage] = useState<'home' | 'about' | 'works' | 'contact'>('home');
+  const [focused, setFocused] = useState(false)
 
   return (
     <div style={styles.app}>
@@ -23,7 +24,9 @@ export default function App() {
         {page === 'about' && <About />}
         {page === 'works' && <Works />}
         {page === 'contact' && <Contact />}
-        <HeroCanvas />
+
+        <HeroCanvas page={page}/>
+
       </main>
       <Footer />
     </div>
