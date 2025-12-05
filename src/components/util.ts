@@ -59,11 +59,16 @@ extend({ MeshSineMaterial, BentPlaneGeometry })
 // --- FIXED TYPE AUGMENTATION ---
 declare module '@react-three/fiber' {
   interface ThreeElements {
-    meshSineMaterial: THREE.MeshBasicMaterial & {
-      time?: { value: number }
+    meshSineMaterial: { 
+      map: THREE.Texture<unknown>; 
+      "map-anisotropy": number; 
+      "map-repeat": number[]; 
+      side: 2; 
+      toneMapped: false;
+     }
+    bentPlaneGeometry: {
+      args: number[]
     }
-    bentPlaneGeometry: THREE.PlaneGeometry & {
-      radius?: number
-    }
+
   }
 }

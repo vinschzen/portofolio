@@ -3,11 +3,12 @@ import { useRef, useState } from 'react'
 import { Canvas, useFrame, createPortal, useThree } from '@react-three/fiber'
 import { Image, Environment, ScrollControls, useScroll, useTexture, Html } from '@react-three/drei'
 import { easing } from 'maath'
-import './util' // assumes you registered bentPlane & meshSineMaterial here
+
+import './util' 
 
 import { styles } from '../styles/layout'
 
-export default function HeroCanvas({ page }: { page?: string }) {
+export default function HeroCanvas({ page }: { page: string }) {
     const ref = useRef<THREE.Group>(null!)
     const [selectedCard, setSelectedCard] = useState(null)
 
@@ -171,8 +172,15 @@ function Banner(props: any) {
     const scroll = useScroll()
 
     useFrame((state, delta) => {
-        ref.current.material.time.value += Math.abs(scroll.delta) * 4
-        ref.current.material.map.offset.x += delta / 2
+
+        
+        // ref.current.material.time.value += Math.abs(scroll.delta) * 4
+
+        const material = ref.current.material;
+        (material as THREE.MeshBasicMaterial).map!.offset.x += delta / 2;
+        // (material as THREE.MeshBasicMaterial).maptime
+
+        // ref.current.material.map.offset.x += delta / 2
     })
 
     return (
