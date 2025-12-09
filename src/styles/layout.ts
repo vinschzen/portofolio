@@ -90,6 +90,14 @@ export const styles: Record<string, React.CSSProperties> = {
         maxWidth: '80%',
         paddingRight: 12,
     },
+    workContent: {
+        position: 'absolute',
+        left: 228,
+        top: '18%',
+        zIndex: 2,
+        minWidth: '80%',
+        paddingRight: 12,
+    },
     cta: {
         padding: '10px 14px',
         borderRadius: 10,
