@@ -32,7 +32,7 @@ export default function Work_1() {
                     <p style={{ marginTop: 6, color: "#cfd2d8ff" }}>{workItem.subtitle}</p>
                     <span style={{ background: "white", borderRadius: "35px", color: "#535457ff", padding: 8, fontSize: 14 }}>Data Science</span>
                     <p style={{ marginTop: 40, color: "#9ca3af", fontStyle: "italic", fontSize: 14 }}>
-                        *This project was developed as part of a team effort during my tenure at XYZ University.
+                        *This project was developed as my Undergraduate Thesis.
                     </p>
                 </header>
 
@@ -160,15 +160,6 @@ export default function Work_1() {
                 https://www.mdpi.com/1424-8220/19/1/210 */}
 
 
-                <section style={{ marginTop: 30, fontSize: 20, marginRight: "8vw" }}>
-                    <h1 style={{ margin: 0, fontSize: 36 }}>Video</h1>
-
-                    <p style={{ textAlign: "justify" }}>Below is a video with narration as a live demonstration of my undergraduate thesis</p>
-
-                    <Video video={"https://www.youtube.com/embed/6DSWmRx6GRc?si=gpr4ji0nRdEEns3z"} />
-                    <span><p style={{ marginTop: "-0.25vh", textAlign: "center" }}>Demo Video</p></span>
-
-                </section>
             </main>
         </motion.div>
     )

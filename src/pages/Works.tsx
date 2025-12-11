@@ -36,8 +36,8 @@ const workItems: WorkItem[] = [
   },
   {
     id: "5",
-    title: "Project Five",
-    subtitle: "Subtitle for Project Five"
+    title: "Mako",
+    subtitle: "Dashboard Application"
   }
 ];
 
