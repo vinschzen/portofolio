@@ -61,6 +61,15 @@ export default function Work_2() {
             }}
           >
             {workItem.images.map((img, idx) => (
+              <motion.div
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.65,
+                        delay: 0.7 + (idx * 0.1),
+                        ease: "easeOut"
+                      }}
+                    >
               <img
                 key={idx}
                 src={img}
@@ -72,6 +81,7 @@ export default function Work_2() {
                   objectFit: "cover",
                 }}
               />
+              </motion.div>
             ))}
           </div>
         </section>

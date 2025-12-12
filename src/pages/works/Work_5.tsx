@@ -60,13 +60,23 @@ export default function Work_4() {
             }}
           >
             {workItem.images.map((src, i) => (
-              <div key={i} style={{ borderRadius: 12, overflow: "hidden", minHeight: 120 }}>
-                <img
-                  src={`/images/work5_` + (i + 1) + `.gif`}
-                  alt={`${workItem.title} ${i + 1}`}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-              </div>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.65,
+                  delay: 0.7 + (i * 0.1),
+                  ease: "easeOut"
+                }}
+              >
+                <div key={i} style={{ borderRadius: 12, overflow: "hidden", minHeight: 120 }}>
+                  <img
+                    src={`/images/work5_` + (i + 1) + `.gif`}
+                    alt={`${workItem.title} ${i + 1}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -113,7 +123,7 @@ export default function Work_4() {
 
         </section>
 
-        <div style={{marginBottom: "10vh"}}> </div>
+        <div style={{ marginBottom: "10vh" }}> </div>
 
 
 

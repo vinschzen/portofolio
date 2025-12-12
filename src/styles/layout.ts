@@ -93,7 +93,7 @@ export const styles: Record<string, React.CSSProperties> = {
     workContent: {
         position: 'absolute',
         left: 228,
-        top: '18%',
+        top: '15%',
         zIndex: 2,
         minWidth: '80%',
         paddingRight: 12,
@@ -121,5 +121,58 @@ export const styles: Record<string, React.CSSProperties> = {
         opacity: 0,
         transform: "translateY(20px)",
     },
-    
+    container: {
+        position: 'absolute',
+        minHeight: '60vh',
+        width: "220px",
+        padding: "1rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.5rem",
+        borderRight: "1px solid rgba(255,255,255,0.1)",
+    },
+    button: {
+        padding: "0.75rem",
+        border: "none",
+        cursor: "pointer",
+        color: "#e6eef8",
+        borderRadius: "6px",
+        fontSize: "0.95rem",
+        maxWidth: "200px",
+        position: "absolute",
+        right: 0,
+        backgroundColor: "rgba(0,0,0,0.02)",
+    },
+    aboutContainer: {
+        marginLeft: "280px",
+        flex: 1,
+        padding: "1.5rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+        position: "relative",
+    },
+    title: {
+        margin: 0,
+        fontSize: "1.8rem",
+        fontWeight: 600,
+    },
+    description: {
+        maxWidth: "700px",
+        lineHeight: 1.6,
+        opacity: 0.9,
+    },
+    subtitle: {
+        fontSize: "1.25rem",
+        fontWeight: 600,
+        marginBottom: "0.5rem",
+    },
+    list: {
+        paddingLeft: "1rem",
+    },
+    listItem: {
+        marginBottom: "0.3rem",
+        opacity: 0.9,
+    },
+
 };

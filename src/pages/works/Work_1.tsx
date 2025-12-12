@@ -50,7 +50,17 @@ export default function Work_1() {
 
                 {/* Video */}
                 <section style={{ marginTop: 30 }}>
-                    <video style={{ width: "60vw" }} autoPlay loop src="/videos/work_1.mp4"></video>
+                    <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            duration: 0.95,
+                            delay: 1.9,
+                            ease: "easeOut"
+                        }}
+                    >
+                        <video style={{ width: "60vw" }} autoPlay loop src="/videos/work_1.mp4"></video>
+                    </motion.div>
                 </section>
 
                 <section style={{ marginTop: 30, fontSize: 20, marginRight: "8vw" }}>

@@ -59,23 +59,33 @@ export default function Work_3() {
             }}
           >
             {workItem.images.map((src, i) => (
-              <div key={i} style={{ borderRadius: 12, overflow: "hidden", minHeight: 120 }}>
-                <img
-                  src={`/images/work3_` + (i + 1) + `.png`}
-                  alt={`${workItem.title} ${i + 1}`}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-              </div>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.65,
+                  delay: 0.7 + (i * 0.1),
+                  ease: "easeOut"
+                }}
+              >
+                <div key={i} style={{ borderRadius: 12, overflow: "hidden", minHeight: 120 }}>
+                  <img
+                    src={`/images/work3_` + (i + 1) + `.png`}
+                    alt={`${workItem.title} ${i + 1}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                </div>
+              </motion.div>
             ))}
-          </div>
+              </div>
         </section>
 
         <section style={{ marginTop: 30, fontSize: 20, marginRight: "8vw" }}>
 
-          <p style={{textAlign: "justify"}}>
+          <p style={{ textAlign: "justify" }}>
             Todocchi is task keeping app that encourages friendly competition and socializing among users to complete their tasks.
-             The app leverages augmented reality (AR) technology to create an engaging and interactive user experience. 
-             It is developed within the full Apple ecosystem using Swift and SwiftUI, ensuring seamless integration with iOS devices.
+            The app leverages augmented reality (AR) technology to create an engaging and interactive user experience.
+            It is developed within the full Apple ecosystem using Swift and SwiftUI, ensuring seamless integration with iOS devices.
           </p>
 
           <p>Making the app, I learned alot about: </p>
@@ -85,13 +95,13 @@ export default function Work_3() {
             <li>Presenting Projects</li>
           </ul>
 
-          <section style={{ display: "flex", margin: "auto", gap: "20px",  }}>
+          <section style={{ display: "flex", margin: "auto", gap: "20px", }}>
             <video style={{ width: "25vw" }} autoPlay loop muted src="/videos/work_2_1.mp4"></video>
             <video style={{ width: "25vw" }} autoPlay loop muted src="/videos/work_2_2.mp4"></video>
           </section>
 
           <p style={{ textAlign: "justify" }}>
-           
+
           </p>
 
           <img style={{ margin: "auto", display: "flex", width: "40vw" }} src="/images/work3_8.png" alt="" />
@@ -102,7 +112,7 @@ export default function Work_3() {
         </section>
 
 
-        <div style={{marginBottom: "10vh"}}> </div>
+        <div style={{ marginBottom: "10vh" }}> </div>
 
 
       </main>
