@@ -159,6 +159,7 @@ export default function Work_1() {
                 Validating Deep Neural Network for Online Decoding of Motor Imagery Movement from EEG Signals (MDPI) for inspiration on Spectrogram CNN modeling pipeline to thresholding method on live robotic arm movements prediction in increments and itss confidence
                 https://www.mdpi.com/1424-8220/19/1/210 */}
 
+                <div style={{ marginBottom: "10vh" }}> </div>
 
             </main>
         </motion.div>

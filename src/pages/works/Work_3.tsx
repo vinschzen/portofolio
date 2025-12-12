@@ -50,7 +50,6 @@ export default function Work_3() {
           <hr style={{ color: "#cfd2d8ff", marginBottom: 5 }} />
         </motion.div>
 
-        {/* Video */}
         <section style={{ marginTop: 16, width: "80%" }}>
           <div
             style={{
@@ -103,6 +102,7 @@ export default function Work_3() {
         </section>
 
 
+        <div style={{marginBottom: "10vh"}}> </div>
 
 
       </main>

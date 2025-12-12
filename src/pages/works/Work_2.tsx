@@ -114,7 +114,7 @@ export default function Work_2() {
         </section>
 
 
-
+        <div style={{marginBottom: "10vh"}}> </div>
 
       </main>
     </motion.div>

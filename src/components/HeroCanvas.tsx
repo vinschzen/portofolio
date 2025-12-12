@@ -94,7 +94,7 @@ function Rig({ page, selectedCard, children, ...props }: { page: string, selecte
 }
 
 function Carousel({ radius = 1.4, count = 8, setSelectedCard, selectedCard }: any) {
-    const images = ['/screenshot.png', '/images/work2_6.png', '/images/work3_8.png']
+    const images = ['/screenshot.png', '/images/work2_6.png', '/images/work3_8.png', '/images/work4_1.jpeg', '/images/work5_2.gif']
 
     return (
         <>

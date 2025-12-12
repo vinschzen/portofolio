@@ -6,6 +6,7 @@ import Work_1 from "./works/Work_1";
 import Work_2 from "./works/Work_2";
 import Work_3 from "./works/Work_3";
 import Work_4 from "./works/Work_4";
+import Work_5 from "./works/Work_5";
 
 interface WorkItem {
   id: string;
@@ -90,7 +91,7 @@ const Works: React.FC = () => {
                 return (
                   <motion.div
                     key={i}
-                    initial={{ x: -20, opacity: 0 }}
+                    initial={{ x: -80, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{
                       duration: 0.35,
@@ -138,7 +139,7 @@ const Works: React.FC = () => {
                 return (
                   <motion.div
                     key={i}
-                    initial={{ x: -20, opacity: 0 }}
+                    initial={{ x: -80, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{
                       duration: 0.35,
@@ -185,6 +186,7 @@ const Works: React.FC = () => {
         {selectedId === `2` && <Work_2 />}
         {selectedId === `3` && <Work_3 />}
         {selectedId === `4` && <Work_4 />}
+        {selectedId === `5` && <Work_5 />}
 
       </div>
     </section>
