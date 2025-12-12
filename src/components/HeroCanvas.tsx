@@ -94,18 +94,20 @@ function Rig({ page, selectedCard, children, ...props }: { page: string, selecte
 }
 
 function Carousel({ radius = 1.4, count = 8, setSelectedCard, selectedCard }: any) {
+    const images = ['/screenshot.png', '/images/work2_6.png', '/images/work3_8.png']
+
     return (
         <>
             {Array.from({ length: count }, (_, i) => (
                 <Card
                     key={i}
                     index={i}
-                    url={`/screenshot.png`}
+                    url={images[i % images.length]}
                     selectedCard={selectedCard}
                     setSelectedCard={setSelectedCard}
                     position={[
                         Math.sin((i / count) * Math.PI * 2) * radius,
-                        0,
+                        0,  
                         Math.cos((i / count) * Math.PI * 2) * radius
                     ]}
                     rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}

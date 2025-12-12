@@ -21,8 +21,9 @@ export default function Video({ video }: { video: string }) {
                         width: "100%",
                         height: "100%"
                     }}
+                    
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                     allowFullScreen
                 ></iframe>
             </div>
