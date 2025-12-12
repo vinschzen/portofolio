@@ -20,7 +20,7 @@ export default function App() {
     <div style={styles.app}>
       <Navbar page={page} setPage={setPage} />
       <main style={styles.main}>
-        {page === 'home' && <Home />}
+        {page === 'home' && <Home setPage={setPage} />}
         {page === 'about' && <About />}
         {page === 'works' && <Works />}
         {page === 'contact' && <Contact />}

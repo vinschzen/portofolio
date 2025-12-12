@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 
 const softskillsList = [
-  "Clear communication",
+  "Coordination",
   "Problem solving",
   "Team collaboration",
   "Structured thinking",

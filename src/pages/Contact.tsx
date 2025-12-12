@@ -3,6 +3,7 @@ import { Physics, RigidBody } from '@react-three/rapier'
 import { useTexture } from '@react-three/drei'
 import React from 'react'
 import { styles } from '../styles/layout'
+import { motion } from 'motion/react'
 
 const IconEmail: React.FC<React.SVGProps<SVGSVGElement>> = (p) => (
   <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" {...p}>
@@ -58,6 +59,15 @@ const IconPhone: React.FC<React.SVGProps<SVGSVGElement>> = (p) => (
 
 const Contact: React.FC = () => (
   <section style={styles.workContent}>
+    <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 0.35,
+                      delay: 0.1,
+                      ease: "easeOut"
+                    }}
+                  >
     <h2 style={styles.title}>Contact Me</h2>
 
     <p style={styles.description}>
@@ -108,6 +118,7 @@ const Contact: React.FC = () => (
         <span style={styles.text}>+62 896-5484-1277</span>
       </div>
     </div>
+    </motion.div>
   </section>
 )
 
